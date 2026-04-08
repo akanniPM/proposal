@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="proposal.css">
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="brand">Proposal<span>AI</span></div>
+      <div class="title">{{TITLE}}</div>
+    </div>
+    <div class="meta">
+      <p><strong>Date:</strong> {{DATE}}</p>
+      <p><strong>Valid Until:</strong> {{VALID_UNTIL}}</p>
+      <p><strong>Status:</strong> {{STATUS}}</p>
+    </div>
+  </div>
+
+  <div class="client-info">
+    <h3>Prepared For</h3>
+    <p><strong>{{CLIENT_NAME}}</strong></p>
+    <p>{{CLIENT_COMPANY}}</p>
+    <p>{{CLIENT_EMAIL}}</p>
+  </div>
+
+  {{SECTIONS}}
+
+  <div class="section">
+    <h2>Project Milestones & Pricing</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Description</th>
+          <th>Timeline</th>
+          <th style="text-align:right">Amount ({{CURRENCY}})</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{MILESTONES}}
+        <tr class="total-row">
+          <td colspan="3">Total</td>
+          <td style="text-align:right">{{TOTAL_AMOUNT}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>This proposal was generated with ProposalAI · {{FROM_NAME}}</p>
+  </div>
+</body>
+</html>
